@@ -102,6 +102,12 @@
 			let confirmatorPlace = '';
 			let confirmatorTime = '';
 
+			let testList = [];
+			let testDict = {};
+
+			testList[0]['cdate'] = 3;
+			alert(testList[0]['cdate']);
+
 			var i = 0;
 		 	$("#tableInfo tr #confirmatorDate").each(function(i, v){
 		 		if(i > 0)
@@ -109,11 +115,13 @@
 		 			confirmatorDate += ',';
 		 		}
 		 		confirmatorDate += $(this).val();
+		 		//testList[i]['c_date'] = $(this).val();
+		 		i++;
 		 	})
+		 	alert(testList);
 		 	console.log(confirmatorDate);
 
 		 	var ii = 0;
-		 	
 		 	$("#tableInfo tr #selectedPlace").each(function(i, v){
 		 		if(ii > 0)
 		 		{
